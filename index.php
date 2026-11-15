@@ -1,0 +1,503 @@
+<?php
+
+$tituloPagina = "Bienvenido";
+$paginaActiva = "inicio";
+
+include 'includes/header.php';
+
+?>
+
+<!-- ===================================
+     1. CARRUSEL DE BIENVENIDA
+     AUTOMÁTICO
+=================================== -->
+
+<section class="carrusel-bienvenida">
+
+    <div class="carrusel-contenedor">
+
+        <div class="carrusel-pista">
+
+            <div class="diapositiva">
+                <img src="image/descargar 8.jpg"
+                     alt="Bienvenidos a nuestro estudio">
+                <div class="texto-diapositiva">
+                    <h1>Bienvenidos</h1>
+                    <p>Capturamos momentos inolvidables</p>
+                </div>
+            </div>
+
+            <div class="diapositiva">
+                <img src="image/4 vérités difficiles à accepter si vous voulez enfin être heureux.jpg"
+                     alt="Sesiones fotográficas">
+                <div class="texto-diapositiva">
+                    <h1>Momentos especiales</h1>
+                    <p>Recuerdos que duran para siempre</p>
+                </div>
+            </div>
+
+            <div class="diapositiva">
+                <img src="image/imagen.jpg"
+                     alt="Fotografía profesional">
+                <div class="texto-diapositiva">
+                    <h1>Fotografía profesional</h1>
+                    <p>Cada imagen cuenta una historia</p>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     2. PRESENTACIÓN DEL ESTUDIO
+=================================== -->
+
+<section class="seccion-presentacion">
+
+    <div class="presentacion-contenido">
+
+        <div class="presentacion-imagen">
+
+            <img src="image/fotografo.jpg"
+                 alt="Nuestro estudio fotográfico">
+
+        </div>
+
+        <div class="presentacion-texto">
+
+            <h2>Sobre mí</h2>
+
+            <p>
+                Soy fotógrafo y me dedico a capturar
+                los momentos más importantes de tu vida.
+
+                Trabajo con creatividad, dedicación y pasión
+                para convertir cada instante en un recuerdo
+                inolvidable.
+            </p>
+
+            <a href="conocenos.php" class="boton-principal">
+                Conóceme
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     3. NUESTROS TRABAJOS
+=================================== -->
+
+<section class="seccion-trabajos">
+
+    <div class="titulo-seccion">
+
+        <span></span>
+
+        <h2>Mí Trabajo</h2>
+
+        <span></span>
+
+    </div>
+
+    <div class="trabajos-galeria">
+
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/Quinceañera.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Quinceaños
+            </span>
+        </a>
+        
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/bautizo.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Bautizo
+            </span>
+        </a>
+        
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/matrimonio.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Matrimonio
+            </span>
+        </a>
+        
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/eventos.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Eventos
+            </span>
+        </a>
+        
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/graduados.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Graduados
+            </span>
+        </a>
+      
+
+        
+
+        <a href="portfolio.php" class="trabajo-item" style="position: relative; display: inline-block;">
+            <img
+            src="image/maternidad.jpg"
+            alt="Trabajo fotográfico 6"
+            tyle="display: block; max-width: 100%;"
+            >
+            <span style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px; color: white; 
+            font-size: 20px; font-weight: bold; text-align: center; background: rgba(0, 0, 0, 0.38); z-index: 10;">
+            Sesión de Maternidad
+            </span>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+     4. GALERÍA DE FOTOGRAFÍAS
+     FLECHAS FIJAS
+=================================== -->
+
+<style>
+    /* Alto del cuadro: cámbialo a gusto */
+    .seccion-galeria .galeria-foto {
+        width: 150% !important;
+        height: 150px !important;
+        overflow: hidden !important;
+    }
+
+    /* La imagen se adapta al cuadro sin deformarse */
+    .seccion-galeria .galeria-foto img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+</style>
+
+<section class="seccion-galeria">
+
+    <div class="titulo-seccion">
+
+        <span></span>
+
+        <h2>Mí Galería</h2>
+
+        <span></span>
+
+    </div>
+
+    <div class="galeria-contenedor">
+
+        <!-- CONTROLES CSS -->
+
+        <input type="radio" name="galeria" id="grupo1" checked>
+        <input type="radio" name="galeria" id="grupo2">
+        <input type="radio" name="galeria" id="grupo3">
+
+
+        <!-- PISTA DE IMÁGENES -->
+
+        <div class="galeria-pista">
+
+            <!-- GRUPO 1 -->
+
+            <div class="galeria-pagina">
+
+                <div class="galeria-foto">
+                    <img src="image/quinceaños 0.jpg" alt="Fotografía 1">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/bautizo 0.jpg" alt="Fotografía 2">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/matrimonio 0.jpg" alt="Fotografía 3">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/empresariales.jpg" alt="Fotografía 4">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/evento 0.jpg" alt="Fotografía 5">
+                </div>
+
+            </div>
+
+
+            <!-- GRUPO 2 -->
+
+            <div class="galeria-pagina">
+
+                <div class="galeria-foto">
+                    <img src="image/familiares.jpg" alt="Fotografía 6">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/graduados 0.jpg" alt="Fotografía 7">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/maternidad  0.jpg" alt="Fotografía 8">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/descargar 8.jpg" alt="Fotografía 9">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/descargar.jpg" alt="Fotografía 10">
+                </div>
+
+            </div>
+
+
+            <!-- GRUPO 3 -->
+
+            <div class="galeria-pagina">
+
+                <div class="galeria-foto">
+                    <img src="image/imagen.jpg" alt="Fotografía 11">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/quinceaños 1.jpg" alt="Fotografía 12">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/bautizo 1.jpg" alt="Fotografía 13">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/matrimonio 1.jpg" alt="Fotografía 14">
+                </div>
+
+                <div class="galeria-foto">
+                    <img src="image/maternidad 1.jpg" alt="Fotografía 15">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ===================================
+             FLECHAS FIJAS FUERA DE LA PISTA
+        =================================== -->
+
+        <!-- GRUPO 1 -->
+
+        <label for="grupo2"
+               class="flecha-galeria flecha-derecha flecha-g1"
+               aria-label="Siguiente grupo">
+            ›
+        </label>
+
+
+        <!-- GRUPO 2 -->
+
+        <label for="grupo1"
+               class="flecha-galeria flecha-izquierda flecha-g2"
+               aria-label="Grupo anterior">
+            ‹
+        </label>
+
+        <label for="grupo3"
+               class="flecha-galeria flecha-derecha flecha-g2"
+               aria-label="Siguiente grupo">
+            ›
+        </label>
+
+
+        <!-- GRUPO 3 -->
+
+        <label for="grupo2"
+               class="flecha-galeria flecha-izquierda flecha-g3"
+               aria-label="Grupo anterior">
+            ‹
+        </label>
+
+    </div>
+
+
+    <div class="texto-galeria">
+
+        <p>Descubre mis mejores momentos fotográficos.</p>
+
+        <a href="portfolio.php" class="boton-principal">
+            Ver Portafolio
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+     CSS DE LAS FLECHAS Y DESLIZAMIENTO
+=================================== -->
+
+<style>
+
+/* CONTENEDOR */
+.galeria-contenedor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* OCULTAR CONTROLES */
+.galeria-contenedor input[type="radio"] {
+    display: none;
+}
+
+/* PISTA */
+.galeria-pista {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* CADA GRUPO */
+.galeria-pagina {
+    width: 33.333333%;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+/* IMÁGENES */
+.galeria-foto {
+    width: 100%;
+    overflow: hidden;
+}
+
+.galeria-foto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* DESLIZAMIENTO */
+#grupo1:checked ~ .galeria-pista {
+    transform: translateX(0);
+}
+
+#grupo2:checked ~ .galeria-pista {
+    transform: translateX(-33.333333%);
+}
+
+#grupo3:checked ~ .galeria-pista {
+    transform: translateX(-66.666666%);
+}
+
+/* FLECHAS FIJAS */
+.flecha-galeria {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 100;
+    user-select: none;
+    transition: background 0.3s;
+}
+
+.flecha-galeria:hover {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+/* POSICIÓN */
+.flecha-izquierda {
+    left: 10px;
+}
+
+.flecha-derecha {
+    right: 10px;
+}
+
+/* FLECHAS SEGÚN GRUPO */
+#grupo1:checked ~ .flecha-g1 {
+    display: flex;
+}
+
+#grupo2:checked ~ .flecha-g2 {
+    display: flex;
+}
+
+#grupo3:checked ~ .flecha-g3 {
+    display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .galeria-pagina {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .galeria-foto img {
+        height: 160px;
+    }
+
+}
+
+</style>
+
+
+<?php include 'includes/footer.php'; ?>
