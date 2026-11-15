@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Estudio fotográfico profesional. Capturamos tus mejores momentos.">
+
+    <title>
+        Conócenos |
+        Mi Estudio Fotográfico
+    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- ===================================
+         ESTILOS DEL SUBMENÚ
+    =================================== -->
+
+    <style>
+
+        /* CONTENEDOR DEL MENÚ */
+
+        .menu-desplegable {
+            position: relative;
+        }
+
+        /* FLECHA */
+
+        .flecha-submenu {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 13px;
+            transition: transform 0.3s;
+        }
+
+        .menu-desplegable:hover .flecha-submenu {
+            transform: rotate(180deg);
+        }
+
+        /* LISTA DESPLEGABLE */
+
+        .submenu-paquetes {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+
+            width: 260px;
+            max-height: 500px;
+            overflow-y: auto;
+
+            background: #171313;
+
+            padding: 10px 0;
+            margin: 0;
+
+            list-style: none;
+            text-align: center;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all 0.3s ease;
+
+            z-index: 99999;
+        }
+
+        /* MOSTRAR AL PASAR EL CURSOR */
+
+        .menu-desplegable:hover .submenu-paquetes,
+        .menu-desplegable:focus-within .submenu-paquetes {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* OPCIONES */
+
+        .submenu-paquetes li {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .submenu-paquetes li a {
+            display: block;
+            padding: 12px 10px;
+
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+        /* EFECTO AL PASAR EL CURSOR */
+
+        .submenu-paquetes li a:hover {
+            color: #c9a36b;
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* BARRA DE DESPLAZAMIENTO */
+
+        .submenu-paquetes::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .submenu-paquetes::-webkit-scrollbar-thumb {
+            background: #a98a62;
+            border-radius: 10px;
+        }
+
+        /* MENÚ EN CELULARES */
+
+        @media (max-width: 768px) {
+
+            .submenu-paquetes {
+                position: static;
+                display: none;
+
+                width: 100%;
+                max-height: 350px;
+
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+
+                background: #171313;
+                box-shadow: none;
+            }
+
+            .menu-desplegable:hover .submenu-paquetes,
+            .menu-desplegable:focus-within .submenu-paquetes {
+                display: block;
+                transform: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ===================================
+     ENCABEZADO Y MENÚ PRINCIPAL
+=================================== -->
+
+<header class="encabezado">
+
+    <div class="contenedor-encabezado">
+
+        <!-- LOGO -->
+
+        <div class="zona-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="image/logo.png"
+                    alt="Logo del estudio fotográfico"
+                    class="logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- BOTÓN MENÚ CELULAR -->
+
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="boton-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+
+        <!-- OPCIONES DEL MENÚ -->
+
+        <nav class="menu-principal">
+
+            <a
+                href="index.html"
+                class=""
+            >
+                ¡Bienvenido!
+            </a>
+
+
+            <a
+                href="fotos_impresas.html"
+                class=""
+            >
+                Fotos impresas
+            </a>
+
+
+            <!-- ===================================
+                 PAQUETES Y PRECIOS
+                 MENÚ DESPLEGABLE
+            =================================== -->
+
+            <div class="menu-desplegable">
+
+                <a
+                    href="paquetes_precios.html"
+                    class=""
+                >
+                    Paquetes y Precios
+
+                    <span class="flecha-submenu">⌄</span>
+
+                </a>
+
+
+                <ul class="submenu-paquetes">
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=quinceanos">Quinceaños</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=bautizos">Bautizos</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=matrimonios">Matrimonios</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=empresariales">Empresariales</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=eventos">Eventos</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=familiar">Familiar</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=graduados">Graduados</a>
+                    </li>
+
+                    <li>
+                        <a href="paquetes_precios.html?tipo=maternidad">Maternidad</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <a
+                href="portfolio.html"
+                class=""
+            >
+                Portafolio
+            </a>
+
+
+            <a
+                href="conocenos.html"
+                class="activo"
+            >
+                Conóceme
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- CONTENIDO DE CADA PÁGINA -->
+
+<main>
+
+<section class="portada-interna">
+
+    <h1>Conóceme</h1>
+
+    <p>Detrás de cada fotografía existe una historia.</p>
+
+</section>
+
+
+<section class="seccion-conocenos">
+
+    <div class="conocenos-imagen">
+
+        <img src="image/fotografo.jpg"
+             alt="Nuestro estudio fotográfico">
+
+    </div>
+
+    <div class="conocenos-texto">
+
+        <h2>Pasión por la fotografía</h2>
+
+        <p>
+            Soy fotógrafo y me dedico a capturar
+            los momentos más especiales de cada persona.
+
+            Me apasiona la fotografía y trabajo para
+            ofrecer imágenes llenas de creatividad, emoción
+            y calidad
+        </p>
+
+        <p>
+            Quiero que cada fotografía se convierta
+            en un recuerdo inolvidable.
+        </p>
+
+        <a href="https://wa.me/51912798469?text=%C2%A1Hola%21%20Estoy%20interesado%28a%29%20en%20sus%20servicios%20fotogr%C3%A1ficos.%20Deseo%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+           class="boton-principal"
+           target="_blank"
+           rel="noopener">
+            Contáctame por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="seccion-contacto" id="contacto">
+
+    <h2>¿Tienes alguna consulta?</h2>
+
+    <p>
+        Estoy disponible para ayudarte y brindarte información
+        sobre mis servicios fotográficos.
+    </p>
+
+    <a href="https://wa.me/51912798469?text=%C2%A1Hola%21%20Estoy%20interesado%28a%29%20en%20sus%20servicios%20fotogr%C3%A1ficos.%20Deseo%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+       class="boton-principal"
+       target="_blank"
+       rel="noopener">
+        Escríbeme ahora
+    </a>
+
+</section>
+
+
+</main>
+
+<!-- ===================================
+     PIE DE PÁGINA
+=================================== -->
+
+<footer class="pie-pagina">
+
+    <div class="redes-sociales">
+
+    <a href="https://www.facebook.com/share/1J8WJfXcMH/"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Facebook">
+        <img src="image/Facebook.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/rutas_y_tradiciones2026?utm_source=qr&amp;psln=c3UzNjRiOWdveWVr"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Instagram">
+        <img src="image/instragram.png" alt="Instagram">
+    </a>
+
+    <a href="http://tiktok.com/@nova_studio2026"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="TikTok">
+        <img src="image/tiktok.png" alt="TikTok">
+    </a>
+
+    <a href="https://youtube.com/@rutas-tradiciones?si=seE9X-LAXu8fvTkh"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="YouTube">
+        <img src="image/youtube.png" alt="YouTube">
+    </a>
+
+</div>
+
+    
+
+    <div class="linea-pie"></div>
+
+    <p>
+        © 2026 Nova Studio.
+        Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<!-- ===================================
+     BOTÓN FLOTANTE DE WHATSAPP Joseph Producciones
+=================================== -->
+
+<a
+    href="https://wa.me/51912798469?text=%C2%A1Hola%21%20Estoy%20interesado%28a%29%20en%20sus%20servicios%20fotogr%C3%A1ficos.%20Deseo%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar directamente por WhatsApp"
+    title="Escríbenos por WhatsApp"
+>
+
+    <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
+
+        <path
+            fill="currentColor"
+            d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-2A15.1 15.1 0 1 0 16 .8zm0 27.5a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.4 1.2 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3zm6.8-9.3c-.4-.2-2.3-1.1-2.7-1.2-.4-.2-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.1 6.5 5.7.9.4 1.7.7 2.2.8.9.3 1.8.2 2.5.1.8-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z"
+        />
+
+    </svg>
+
+</a>
+
+</body>
+</html>

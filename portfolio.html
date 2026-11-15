@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Estudio fotográfico profesional. Capturamos tus mejores momentos.">
+
+    <title>Portfolio | Joseph Producciones</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- ESTILOS DEL SUBMENÚ -->
+
+    <style>
+
+        .menu-desplegable {
+            position: relative;
+        }
+
+        .flecha-submenu {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 13px;
+            transition: transform 0.3s;
+        }
+
+        .menu-desplegable:hover .flecha-submenu {
+            transform: rotate(180deg);
+        }
+
+        .submenu-paquetes {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+
+            width: 260px;
+            max-height: 500px;
+            overflow-y: auto;
+
+            background: #171313;
+
+            padding: 10px 0;
+            margin: 0;
+
+            list-style: none;
+            text-align: center;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all 0.3s ease;
+
+            z-index: 99999;
+        }
+
+        .menu-desplegable:hover .submenu-paquetes,
+        .menu-desplegable:focus-within .submenu-paquetes {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .submenu-paquetes li {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .submenu-paquetes li a {
+            display: block;
+            padding: 12px 10px;
+
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+
+            text-decoration: none;
+
+            transition: all 0.25s ease;
+        }
+
+        .submenu-paquetes li a:hover {
+            color: #c9a36b;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .submenu-paquetes::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .submenu-paquetes::-webkit-scrollbar-thumb {
+            background: #a98a62;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+
+            .submenu-paquetes {
+                position: static;
+                display: none;
+
+                width: 100%;
+                max-height: 350px;
+
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+
+                background: #171313;
+                box-shadow: none;
+            }
+
+            .menu-desplegable:hover .submenu-paquetes,
+            .menu-desplegable:focus-within .submenu-paquetes {
+                display: block;
+                transform: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ENCABEZADO Y MENÚ PRINCIPAL -->
+
+<header class="encabezado">
+
+    <div class="contenedor-encabezado">
+
+        <!-- LOGO -->
+
+        <div class="zona-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="image/logo.png"
+                    alt="Logo del estudio fotográfico"
+                    class="logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- BOTÓN MENÚ CELULAR -->
+
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label for="menu-toggle" class="boton-menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+
+        <!-- OPCIONES DEL MENÚ -->
+
+        <nav class="menu-principal">
+
+            <a href="index.html">
+                ¡Bienvenido!
+            </a>
+
+
+            <a href="fotos_impresas.html">
+                Fotos impresas
+            </a>
+
+
+            <!-- PAQUETES Y PRECIOS (MENÚ DESPLEGABLE) -->
+
+            <div class="menu-desplegable">
+
+                <a href="paquetes_precios.html">
+                    Paquetes y Precios
+
+                    <span class="flecha-submenu">⌄</span>
+
+                </a>
+
+
+                <ul class="submenu-paquetes">
+
+                    <li><a href="paquetes_precios.html#quinceanos">Quinceaños</a></li>
+
+                    <li><a href="paquetes_precios.html#bautizos">Bautizos</a></li>
+
+                    <li><a href="paquetes_precios.html#matrimonios">Matrimonios</a></li>
+
+                    <li><a href="paquetes_precios.html#empresariales">Empresariales</a></li>
+
+                    <li><a href="paquetes_precios.html#eventos">Eventos</a></li>
+
+                    <li><a href="paquetes_precios.html#familiar">Familiar</a></li>
+
+                    <li><a href="paquetes_precios.html#graduados">Graduados</a></li>
+
+                    <li><a href="paquetes_precios.html#maternidad">Maternidad</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <a href="portfolio.html" class="activo">
+                Portafolio
+            </a>
+
+
+            <a href="conocenos.html">
+                Conóceme
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- CONTENIDO DE LA PÁGINA -->
+
+<main>
+
+
+<section class="portada-interna">
+
+    <h1>Mi Portfolio</h1>
+
+    <p>Una selección de nuestros mejores trabajos fotográficos.</p>
+
+</section>
+
+
+<section class="contenido-interno">
+
+    <div class="titulo-seccion">
+
+        <span></span>
+
+        <h2>Mi Trabajo Fotográfico</h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="portfolio-galeria">
+
+        <div class="portfolio-foto">
+            <img src="image/quinceaños 1.jpg" alt="Fotografía del portfolio 1">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/bautizo 0.jpg" alt="Fotografía del portfolio 2">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/matrimonio 1.jpg" alt="Fotografía del portfolio 3">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/empresariales.jpg" alt="Fotografía del portfolio 4">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/evento 1.jpg" alt="Fotografía del portfolio 5">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/familiares 2.jpg" alt="Fotografía del portfolio 6">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/graduados 3.jpg" alt="Fotografía del portfolio 7">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/maternidad 3.jpg" alt="Fotografía del portfolio 8">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/quinceaños 3.jpg" alt="Fotografía del portfolio 9">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/bautizo 1.jpg" alt="Fotografía del portfolio 10">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/matrimonio 3.jpg" alt="Fotografía del portfolio 11">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/empresariales 0.jpg" alt="Fotografía del portfolio 12">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/evento 2.jpg" alt="Fotografía del portfolio 13">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/familiares.jpg" alt="Fotografía del portfolio 14">
+        </div>
+
+        <div class="portfolio-foto">
+            <img src="image/maternidad 1.jpg" alt="Fotografía del portfolio 15">
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<!-- PEGA AQUÍ EL CONTENIDO DE includes/footer.php (sin <?php ?>, y sin </main> ni </body></html> si ya los tiene) -->
+
+<!-- ===================================
+     PIE DE PÁGINA
+=================================== -->
+
+<footer class="pie-pagina">
+
+    <div class="redes-sociales">
+
+    <a href="https://www.facebook.com/share/1J8WJfXcMH/"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Facebook">
+        <img src="image/Facebook.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/rutas_y_tradiciones2026?utm_source=qr&amp;psln=c3UzNjRiOWdveWVr"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Instagram">
+        <img src="image/instragram.png" alt="Instagram">
+    </a>
+
+    <a href="http://tiktok.com/@nova_studio2026"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="TikTok">
+        <img src="image/tiktok.png" alt="TikTok">
+    </a>
+
+    <a href="https://youtube.com/@rutas-tradiciones?si=seE9X-LAXu8fvTkh"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="YouTube">
+        <img src="image/youtube.png" alt="YouTube">
+    </a>
+
+</div>
+
+    
+
+    <div class="linea-pie"></div>
+
+    <p>
+        © 2026 Nova Studio.
+        Todos los derechos reservados.
+    </p>
+
+</footer>
+
+</body>
+</html>

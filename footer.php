@@ -5,29 +5,30 @@
      PIE DE PÁGINA
 =================================== -->
 
+
 <footer class="pie-pagina">
 
     <div class="redes-sociales">
 
-    <a href="<?= htmlspecialchars($facebook) ?>"
+    <a href="https://www.facebook.com/share/1J8WJfXcMH/"
        target="_blank" rel="noopener noreferrer"
        aria-label="Facebook">
         <img src="image/Facebook.png" alt="Facebook">
     </a>
 
-    <a href="<?= htmlspecialchars($instagram) ?>"
+    <a href="https://www.instagram.com/rutas_y_tradiciones2026?utm_source=qr&amp;psln=c3UzNjRiOWdveWVr"
        target="_blank" rel="noopener noreferrer"
        aria-label="Instagram">
         <img src="image/instragram.png" alt="Instagram">
     </a>
 
-    <a href="<?= htmlspecialchars($tiktok) ?>"
+    <a href="http://tiktok.com/@nova_studio2026"
        target="_blank" rel="noopener noreferrer"
        aria-label="TikTok">
         <img src="image/tiktok.png" alt="TikTok">
     </a>
 
-    <a href="<?= htmlspecialchars($youtube) ?>"
+    <a href="https://youtube.com/@rutas-tradiciones?si=seE9X-LAXu8fvTkh"
        target="_blank" rel="noopener noreferrer"
        aria-label="YouTube">
         <img src="image/youtube.png" alt="YouTube">
