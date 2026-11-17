@@ -34,11 +34,17 @@
         .flecha-submenu {
             display: inline-block;
             margin-left: 5px;
-            font-size: 13px;
+            padding: 6px 10px;
+            font-size: 18px;
+            color: inherit;
+            background: none;
+            border: none;
+            cursor: pointer;
             transition: transform 0.3s;
         }
 
-        .menu-desplegable:hover .flecha-submenu {
+        .menu-desplegable:hover .flecha-submenu,
+        .menu-desplegable.abierto .flecha-submenu {
             transform: rotate(180deg);
         }
 
@@ -122,6 +128,13 @@
 
         @media (max-width: 768px) {
 
+            .menu-desplegable {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+
             .submenu-paquetes {
                 position: static;
                 display: none;
@@ -139,8 +152,11 @@
 
             .menu-desplegable:hover .submenu-paquetes,
             .menu-desplegable:focus-within .submenu-paquetes {
+                display: none;
+            }
+
+            .menu-desplegable.abierto .submenu-paquetes {
                 display: block;
-                transform: none;
             }
 
         }
@@ -220,15 +236,9 @@
 
             <div class="menu-desplegable">
 
-                <a
-                    href="paquetes_precios.html"
-                    class="activo"
-                >
-                    Paquetes y Precios
+                <a href="paquetes_precios.html" class="activo">Paquetes y Precios</a>
 
-                    <span class="flecha-submenu">⌄</span>
-
-                </a>
+                <button type="button" class="flecha-submenu" aria-label="Abrir menú de paquetes">⌄</button>
 
 
                 <ul class="submenu-paquetes">
@@ -382,7 +392,7 @@ var categorias = {
 
     "matrimonios": {
         "titulo": "Matrimonios",
-        "texto": "Capturamos cada instante de tu gran día.",
+        "texto": "Capturo cada instante de tu gran día.",
         "paquetes": [
             { "imagen": "matrimonio.jpg", "nombre": "Paquete Básico", "descripcion": "Cobertura de la ceremonia.", "precio": "Consultar precio" },
             { "imagen": "matrimonio 0.jpg", "nombre": "Paquete Premium", "descripcion": "Cobertura completa y álbum.", "precio": "Consultar precio" }
@@ -603,7 +613,7 @@ if (hayCategoria) {
     <a href="https://www.facebook.com/share/1J8WJfXcMH/"
        target="_blank" rel="noopener noreferrer"
        aria-label="Facebook">
-        <img src="image/Facebook.png" alt="Facebook">
+        <img src="image/facebook.png" alt="Facebook">
     </a>
 
     <a href="https://www.instagram.com/rutas_y_tradiciones2026?utm_source=qr&amp;psln=c3UzNjRiOWdveWVr"
@@ -665,6 +675,19 @@ if (hayCategoria) {
     </svg>
 
 </a>
+
+
+<!-- SCRIPT DEL MENÚ DESPLEGABLE EN CELULAR -->
+
+<script>
+    document.querySelectorAll('.flecha-submenu').forEach(function (boton) {
+        boton.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            boton.parentElement.classList.toggle('abierto');
+        });
+    });
+</script>
 
 </body>
 </html>

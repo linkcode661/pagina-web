@@ -1,0 +1,1237 @@
+
+/* =================================================
+   1. CONFIGURACIÓN GENERAL
+================================================= */
+
+:root {
+    --marron: #351b06;
+    --marron2: #4a2a12;
+    --durazno: #fce5d7;
+    --blanco: #ffffff;
+    --texto: #493628;
+    --dorado: #d7b58d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* =================================================
+   2. ENCABEZADO Y MENÚ
+================================================= */
+
+.encabezado {
+    width: 100%;
+    min-height: 212px;
+    background: linear-gradient(110deg, #101010, #420b12, #a30d20);
+    border-bottom: 4px solid #a30d20;
+}
+
+.contenedor-encabezado {
+    max-width: 1250px;
+    min-height: 208px;
+    margin: auto;
+    padding: 15px 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zona-logo {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 270px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.menu-principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    gap: 35px;
+    background: linear-gradient(90deg, #111111, #760d1c, #111111);
+    border: 1px solid #ffffff25;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px #0005;
+}
+
+.menu-principal a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 7px;
+    white-space: nowrap;
+    position: relative;
+    transition: color .3s ease;
+}
+
+.menu-principal a:hover,
+.menu-principal a.activo {
+    color: #ffb8c0;
+}
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 0;
+    height: 2px;
+    background: #ff3048;
+    transition: width .3s ease;
+}
+
+.menu-principal a:hover::after,
+.menu-principal a.activo::after {
+    width: calc(100% - 10px);
+}
+
+.menu-toggle,
+.boton-menu {
+    display: none;
+}
+
+
+
+/* =================================================
+   3. CARRUSEL AUTOMÁTICO DE BIENVENIDA
+================================================= */
+
+.carrusel-bienvenida {
+    width: 100%;
+    overflow: hidden;
+    background: #7a6f6f;
+}
+
+.carrusel-contenedor {
+    width: 100%;
+    height: clamp(500px, 50vw, 480px); /* tamaño de vienvenidas */
+    overflow: hidden;
+}
+
+.carrusel-pista {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    animation: carruselAutomatico 18s infinite;
+}
+
+.diapositiva {
+    width: 33.333333%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.diapositiva img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-diapositiva {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 8px #0009;
+}
+
+.texto-diapositiva h1 {
+    font-size: clamp(27px, 4vw, 50px);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.texto-diapositiva p {
+    font-size: clamp(13px, 2vw, 19px);
+}
+
+@keyframes carruselAutomatico {
+
+    0%, 27% {
+        transform: translateX(0);
+    }
+
+    33%, 60% {
+        transform: translateX(-33.333333%);
+    }
+
+    66%, 93% {
+        transform: translateX(-66.666666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* =================================================
+   4. PRESENTACIÓN DEL ESTUDIO
+================================================= */
+
+.seccion-presentacion {
+    width: 100%;
+    background: var(--durazno);
+    padding: 25px 20px;
+}
+
+.presentacion-contenido {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.presentacion-imagen {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(201, 9, 9, 0.623);
+}
+
+.presentacion-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.presentacion-texto {
+    max-width: 570px;
+}
+
+.presentacion-texto h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--marron);
+    margin-bottom: 10px;
+}
+
+.presentacion-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* =================================================
+   5. BOTONES
+================================================= */
+
+.boton-principal {
+    display: inline-block;
+    background: var(--marron);
+    color: white;
+    padding: 11px 23px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.boton-principal:hover {
+    background: var(--marron2);
+    transform: translateY(-2px);
+}
+
+
+/* =================================================
+   6. TÍTULOS DE LAS SECCIONES
+================================================= */
+
+.titulo-seccion {
+    max-width: 900px;
+    margin: 0 auto 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo-seccion span {
+    height: 1px;
+    flex: 1;
+    background: #1b0d01;
+}
+
+.titulo-seccion h2 {
+    color: var(--marron);
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* =================================================
+   7. NUESTROS TRABAJOS
+================================================= */
+
+.seccion-trabajos {
+    padding: 25px 15px;
+    background: white;
+}
+
+.trabajos-galeria {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+}
+
+.trabajo-item {
+    height: 155px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.trabajo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.trabajo-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =================================================
+   8. GALERÍA CON FLECHAS MANUALES
+   FLECHAS SIN DUPLICADOS
+================================================= */
+
+.seccion-galeria {
+    background: var(--durazno);
+    padding: 35px 18px;
+}
+
+.galeria-contenedor {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.galeria-contenedor input {
+    display: none;
+}
+
+.galeria-pista {
+    display: flex;
+    width: 300%;
+    transition: transform .8s cubic-bezier(.22, .61, .36, 1);
+    will-change: transform;
+}
+
+.galeria-pagina {
+    width: 33.333333%;
+    flex: 0 0 33.333333%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    gap: 12px;
+    padding: 5px 65px;
+}
+
+.galeria-foto {
+    height: 220px;
+    overflow: hidden;
+    background: #c50808;
+    border-radius: 9px;
+}
+
+.galeria-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.galeria-foto:hover img {
+    transform: scale(1.06);
+}
+
+
+/* DESPLAZAMIENTO */
+
+#grupo1:checked ~ .galeria-pista {
+    transform: translateX(0);
+}
+
+#grupo2:checked ~ .galeria-pista {
+    transform: translateX(-33.333333%);
+}
+
+#grupo3:checked ~ .galeria-pista {
+    transform: translateX(-66.666666%);
+}
+
+
+/* ESTILO GENERAL DE LAS FLECHAS */
+
+.flecha-galeria {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: linear-gradient(145deg, #b51225, #171717);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 12px #0005;
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+.flecha-galeria:hover {
+    background: linear-gradient(145deg, #ed243b, #333333);
+    box-shadow: 0 5px 15px #0006;
+}
+
+.flecha-izquierda {
+    left: 5px;
+}
+
+.flecha-derecha {
+    right: 5px;
+}
+
+
+/* CORRECCIÓN DEFINITIVA DE FLECHAS DUPLICADAS */
+
+/* Ocultar todas las flechas inicialmente */
+.galeria-pista .flecha-galeria {
+    display: none;
+}
+
+/* GRUPO 1: solamente flecha derecha */
+#grupo1:checked ~ .galeria-pista
+.galeria-pagina:nth-child(1) .flecha-derecha {
+    display: flex;
+}
+
+/* GRUPO 2: flecha izquierda y derecha */
+#grupo2:checked ~ .galeria-pista
+.galeria-pagina:nth-child(2) .flecha-izquierda,
+#grupo2:checked ~ .galeria-pista
+.galeria-pagina:nth-child(2) .flecha-derecha {
+    display: flex;
+}
+
+/* GRUPO 3: solamente flecha izquierda */
+#grupo3:checked ~ .galeria-pista
+.galeria-pagina:nth-child(3) .flecha-izquierda {
+    display: flex;
+}
+
+
+.texto-galeria {
+    text-align: center;
+    padding-top: 22px;
+}
+
+.texto-galeria p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =================================================
+   9. PORTADAS DE PÁGINAS INTERNAS
+================================================= */
+
+.portada-interna {
+    min-height: 230px;
+    background:
+        linear-gradient(#72b5ecb8, #351b06b8),
+        url("../image/bienvenida.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+}
+
+.portada-interna h1 {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.portada-interna p {
+    font-size: 16px;
+}
+
+
+/* =================================================
+   10. CONTENIDO INTERNO
+================================================= */
+
+.contenido-interno {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.tarjetas-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-servicio {
+    background: white;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 18px #351b0618;
+    border-radius: 5px;
+    padding-bottom: 25px;
+}
+
+.tarjeta-servicio img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.tarjeta-contenido {
+    padding: 18px 15px 0;
+}
+
+.tarjeta-contenido h3 {
+    color: var(--marron);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-contenido p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+}
+
+.precio {
+    color: var(--marron);
+    margin-bottom: 15px;
+}
+
+
+/* =================================================
+   11. PORTFOLIO
+================================================= */
+
+.portfolio-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.portfolio-foto {
+    height: 280px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.portfolio-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.portfolio-foto:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =================================================
+   12. CONÓCENOS
+================================================= */
+
+.seccion-conocenos {
+    max-width: 1050px;
+    margin: auto;
+    padding: 50px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.conocenos-imagen img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.conocenos-texto h2 {
+    color: var(--marron);
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.conocenos-texto p {
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+
+
+/* =================================================
+   13. CONTACTO
+================================================= */
+
+.seccion-contacto {
+    background: var(--durazno);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    color: var(--marron);
+    margin-bottom: 12px;
+    font-size: 27px;
+}
+
+.seccion-contacto p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* =================================================
+   14. PIE DE PÁGINA
+================================================= */
+
+.pie-pagina {
+    background: var(--marron);
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 20px;
+}
+
+.redes-sociales a {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #ffffff55;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    transition: .3s;
+}
+
+.redes-sociales a img {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.redes-sociales a:hover {
+    background: var(--dorado);
+    border-color: var(--dorado);
+    transform: translateY(-4px);
+}
+
+.enlaces-pie {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.enlaces-pie a {
+    color: white;
+    font-size: 13px;
+}
+
+.enlaces-pie a:hover {
+    color: var(--dorado);
+}
+
+.linea-pie {
+    width: 50%;
+    height: 1px;
+    background: #ffffff45;
+    margin: 15px auto;
+}
+
+.pie-pagina p {
+    font-size: 12px;
+    color: #e7d9ce;
+}
+
+
+/* =================================================
+   15. BOTÓN FLOTANTE WHATSAPP
+================================================= */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 9999;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 12px #0004;
+    transition: transform .3s, background .3s;
+}
+
+.whatsapp-flotante svg {
+    width: 34px;
+    height: 34px;
+}
+
+.whatsapp-flotante:hover {
+    background: #1da851;
+    transform: scale(1.1);
+}
+
+
+/* =================================================
+   16. TABLETS
+================================================= */
+
+@media (max-width: 950px) {
+
+    .zona-logo {
+        padding-right: 0;
+    }
+
+    .menu-principal {
+        justify-content: center;
+        padding: 5px 10px;
+        gap: 14px;
+    }
+
+    .menu-principal a {
+        font-size: 14px;
+    }
+
+    .trabajo-item {
+        height: 125px;
+    }
+
+    .galeria-foto {
+        height: 170px;
+    }
+
+    .galeria-pagina {
+        padding-left: 55px;
+        padding-right: 55px;
+        gap: 8px;
+    }
+
+    .tarjetas-servicios {
+        gap: 15px;
+    }
+}
+
+
+/* =================================================
+   17. CELULARES
+================================================= */
+
+@media (max-width: 680px) {
+
+    .encabezado {
+        min-height: 78px;
+    }
+
+    .contenedor-encabezado {
+        min-height: 78px;
+        padding: 5px 17px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .zona-logo {
+        width: auto;
+        height: 65px;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 175px;
+        height: 58px;
+    }
+
+    /* MENÚ HAMBURGUESA */
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .boton-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .boton-menu span {
+        width: 27px;
+        height: 2px;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(180deg, #8c1020, #111111);
+        z-index: 100;
+        padding: 10px 22px 18px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        border-radius: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-principal {
+        display: flex;
+    }
+
+    .menu-principal a {
+        font-size: 16px;
+        padding: 14px 5px;
+        border-bottom: 1px solid #ffffff30;
+    }
+
+    .menu-principal a::after {
+        display: none;
+    }
+
+    /* CARRUSEL */
+
+    .carrusel-contenedor {
+        height: 250px;
+    }
+
+    .texto-diapositiva h1 {
+        font-size: 28px;
+    }
+
+    /* PRESENTACIÓN */
+
+    .seccion-presentacion {
+        padding: 25px 18px;
+    }
+
+    .presentacion-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .presentacion-imagen {
+        width: 145px;
+        height: 145px;
+    }
+
+    .presentacion-texto h2 {
+        font-size: 26px;
+    }
+
+    .presentacion-texto p {
+        font-size: 15px;
+    }
+
+    /* TÍTULOS */
+
+    .titulo-seccion {
+        gap: 8px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 22px;
+    }
+
+    /* TRABAJOS */
+
+    .trabajos-galeria {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .trabajo-item {
+        height: 115px;
+    }
+
+    /* GALERÍA */
+
+    .galeria-pagina {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 5px 40px;
+        gap: 7px;
+    }
+
+    .galeria-foto {
+        height: 145px;
+    }
+
+    .galeria-foto:nth-child(n+3) {
+        display: none;
+    }
+
+    .flecha-galeria {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    .flecha-izquierda {
+        left: 2px;
+    }
+
+    .flecha-derecha {
+        right: 2px;
+    }
+
+    /* SERVICIOS */
+
+    .tarjetas-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-servicio img {
+        height: 260px;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .portfolio-foto {
+        height: 175px;
+    }
+
+    /* CONÓCENOS */
+
+    .seccion-conocenos {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .conocenos-imagen img {
+        height: 270px;
+    }
+
+    .conocenos-texto h2 {
+        font-size: 26px;
+    }
+
+    .conocenos-texto p {
+        font-size: 15px;
+    }
+
+    /* PORTADAS */
+
+    .portada-interna {
+        min-height: 180px;
+    }
+
+    .portada-interna h1 {
+        font-size: 34px;
+    }
+
+    /* PIE DE PÁGINA */
+
+    .enlaces-pie {
+        gap: 12px;
+    }
+
+    .whatsapp-flotante {
+        width: 54px;
+        height: 54px;
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+
+/* =================================================
+   18. PANTALLAS MUY PEQUEÑAS
+================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        width: 145px;
+    }
+
+    .trabajo-item {
+        height: 95px;
+    }
+
+    .galeria-pagina {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .galeria-foto {
+        height: 120px;
+    }
+
+    .portfolio-foto {
+        height: 145px;
+    }
+}
+
+
+/* =================================================
+   19. ACCESIBILIDAD
+================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .carrusel-pista {
+        animation: none;
+    }
+
+    .galeria-pista {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+    }
+}
+
+
+
+    /* nuestra galeria Espacio entre las imágenes */
+    .seccion-galeria .galeria-pagina {
+        display: flex !important;
+        gap: 20px !important;           /* espacio entre fotos, cámbialo a gusto */
+        box-sizing: border-box !important;
+        padding: 0 10px !important;     /* espacio en los bordes izquierdo y derecho */
+    }
+
+    /* Alto del cuadro: cámbialo a gusto */
+    .seccion-galeria .galeria-foto {
+        flex: 1 !important;             /* todas del mismo ancho */
+        min-width: 0 !important;
+        height: 400px !important;
+        overflow: hidden !important;
+    }
+
+    /* La imagen se adapta al cuadro sin deformarse */
+    .seccion-galeria .galeria-foto img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+
+
+    /* TAMAÑO DEL LOGO */
+
+.zona-logo .logo {
+    width: 300px !important;      /* ancho del logo, cámbialo a gusto */
+    height: auto !important;      /* el alto se ajusta solo, sin deformar */
+    max-width: 100% !important;
+    display: block;
+}
+
+/* TAMAÑO DEL LOGO EN CELULARES */
+
+@media (max-width: 768px) {
+
+    .zona-logo .logo {
+        width: 200px !important;  /* ancho en celular */
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .menu-desplegable {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    /* "Paquetes y Precios" ocupa todo el ancho, igual que los demás enlaces */
+    .menu-desplegable > a {
+        flex: 1;
+    }
+
+    /* La flecha queda al extremo derecho de la misma fila */
+    .menu-desplegable > .flecha-submenu {
+        margin-left: 0;
+    }
+
+    .submenu-paquetes {
+        position: static;
+        display: none;
+
+        flex-basis: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        max-height: 350px;
+        margin: 0;
+        left: auto;
+
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+
+        background: #171313;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .menu-desplegable:hover .submenu-paquetes,
+    .menu-desplegable:focus-within .submenu-paquetes {
+        display: none;
+        transform: none !important;
+        left: auto !important;
+    }
+
+    .menu-desplegable.abierto .submenu-paquetes {
+        display: block;
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .submenu-paquetes li a {
+        text-align: center;
+    }
+
+}
+
+
+ /* colo de la fecha */
+
+.flecha-submenu {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
